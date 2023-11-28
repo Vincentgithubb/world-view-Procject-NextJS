@@ -7,6 +7,7 @@ import { FetchCountryData } from '@/services/ServiceCountry'
 
 export default function Home() {
   const [data, setdata] = useState(null)
+  const [searchTerm, setSearchTerm] = useState('')
 
   useEffect(() => {
     FetchCountryData().then((data) => {
@@ -18,14 +19,24 @@ export default function Home() {
         }
         return 0
       })
-      setdata(data) //bonjout
+      setdata(data)
     })
   }, [])
 
+  const handleSearch = (event: any) => {
+    setSearchTerm(event.target.value)
+  }
+
+  const filteredData =
+    data && data.filter((country: any) => country.name.common.toLowerCase().includes(searchTerm.toLowerCase()))
+
   return (
     <main>
-      <Navbar />
-      <div className="boitepays">{data && data.map((data: any) => <CountryCard country={data} />)}</div>
+      <Navbar handleSearch={handleSearch} />
+      <div className="boitepays">
+        {filteredData &&
+          filteredData.map((country: any) => <CountryCard key={country.name.common} country={country} />)}
+      </div>
     </main>
   )
 }
