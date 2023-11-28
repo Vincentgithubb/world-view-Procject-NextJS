@@ -18,7 +18,7 @@ export default function Home() {
         }
         return 0
       })
-      setdata(data)
+      setdata(data) //bonjout
     })
   }, [])
 
