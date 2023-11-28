@@ -16,12 +16,31 @@
   }
 }
 
+.topnav {
+  overflow: hidden;
+  background-color: black;
+  justify-content: space-between;
+  display: flex;
+}
+.topnav a {
+  float: left;
+  color: orchid;
+  text-align: center;
+  padding: 1% 1%;
+  text-decoration: none;
+  font-size: 100%;
+}
+
+.topnav a:hover {
+  background-color: blueviolet;
+  color: black;
+}
+
+.search {
+  width: 20%;
+  margin: 1%;
+}
+
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: #333;
 }
