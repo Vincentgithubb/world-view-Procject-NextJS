@@ -3,6 +3,7 @@
   background-color: black;
   justify-content: space-between;
   display: flex;
+  height: 5%;
 }
 .topnav a {
   float: left;
@@ -19,8 +20,8 @@
 }
 
 .search {
-  width: 20%;
-  margin: 1%;
+  width: 25%;
+  margin: 0.5%;
 }
 
 body {
@@ -28,8 +29,8 @@ body {
 }
 
 .flag {
-  width: auto;
-  height: 150px;
+  width: 200px;
+  height: auto;
 }
 .name {
   color: white;
@@ -37,13 +38,12 @@ body {
 }
 
 .card {
-  background-color: aquamarine;
-  border: solid black;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex: 0 0 calc(33.33333333333333% - 20px);
 }
 
 .boitepays {

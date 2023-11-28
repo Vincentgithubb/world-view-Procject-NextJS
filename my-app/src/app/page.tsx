@@ -10,7 +10,14 @@ export default function Home() {
 
   useEffect(() => {
     FetchCountryData().then((data) => {
-      console.log(data[0].name.common)
+      data.sort((a: any, b: any) => {
+        if (a.name.common < b.name.common) {
+          return -1
+        } else if (a.name.common > b.name.common) {
+          return 1
+        }
+        return 0
+      })
       setdata(data)
     })
   }, [])
