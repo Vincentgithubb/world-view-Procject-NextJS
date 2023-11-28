@@ -2,15 +2,14 @@ import Input from 'postcss'
 import { useEffect } from 'react'
 
 type countrycardProps = {
-  nom: string
-  flag: string
+  country: any
 }
 
-const CountryCard = ({ flag, nom }: countrycardProps) => {
+const CountryCard = ({ country }: countrycardProps) => {
   return (
-    <div>
-      <h1>{nom}</h1>
-      {flag && <p>{flag}</p>}
+    <div className="card">
+      <h1 className="name">{country.name.common}</h1>
+      <img className="flag" src={country.flags.svg} />
     </div>
   )
 }

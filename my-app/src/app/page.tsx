@@ -10,7 +10,7 @@ export default function Home() {
 
   useEffect(() => {
     FetchCountryData().then((data) => {
-      console.log(data)
+      console.log(data[0].name.common)
       setdata(data)
     })
   }, [])
@@ -18,13 +18,7 @@ export default function Home() {
   return (
     <main>
       <Navbar />
-      <div>
-        <div>
-          <div className="w-[200px] h-[200px] shadow-md bg-fuchsia-700">
-            <CountryCard flag={'bonjour'} nom={'test'} />
-          </div>
-        </div>
-      </div>
+      <div className="boitepays">{data && data.map((data: any) => <CountryCard country={data} />)}</div>
     </main>
   )
 }
