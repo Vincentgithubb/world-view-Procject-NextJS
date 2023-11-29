@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import Input from 'postcss/lib/input'
+import Link from 'next/link'
 
 type navProps = {
   handleSearch: any
@@ -8,7 +9,7 @@ type navProps = {
 const Navbar = ({ handleSearch }: navProps) => {
   return (
     <div className="topnav">
-      <a className="active" href="#home">
+      <a className="active" href="">
         World View
       </a>
       <input className="search" type="text" placeholder="Search" onChange={handleSearch} />

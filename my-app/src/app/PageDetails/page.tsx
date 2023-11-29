@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Navbar from '@/components/Navbar'
 import { FetchCountryData } from '@/services/ServiceCountry'
 import { FetchDetailsCountryData } from '@/services/ServiceDetails'
-import CountryType from './Types&Utilities/TypeCountry'
+import CountryType from '../Types&Utilities/TypeCountry'
 import Link from 'next/link'
 
 export default function Home() {
@@ -14,14 +14,7 @@ export default function Home() {
 
   useEffect(() => {
     FetchCountryData().then((data) => {
-      data.sort((a: any, b: any) => {
-        if (a.name.common < b.name.common) {
-          return -1
-        } else if (a.name.common > b.name.common) {
-          return 1
-        }
-        return 0
-      })
+      data.sort((a: any, b: any) => {})
       setdata(data)
     })
   }, [])
@@ -36,10 +29,6 @@ export default function Home() {
   return (
     <main>
       <Navbar handleSearch={handleSearch} />
-      <div className="boitepays">
-        {filteredData &&
-          filteredData.map((country: any) => <CountryCard key={country.name.common} country={country} />)}
-      </div>
     </main>
   )
 }
