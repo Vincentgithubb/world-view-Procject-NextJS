@@ -8,7 +8,14 @@ type countrycardProps = {
 
 const CountryCard = ({ country }: countrycardProps) => {
   return (
-    <Link href="/PageDetails">
+    <Link
+      href={{
+        pathname: '/pagedetails',
+        query: {
+          name: `${country.name.common}`
+        }
+      }}
+    >
       <div className="card">
         <h1 className="name">{country.name.common}</h1>
         <img className="flag" src={country.flags.svg} />

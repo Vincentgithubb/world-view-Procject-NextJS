@@ -10,7 +10,6 @@
   color: orchid;
   text-align: center;
   padding: 1% 1%;
-  text-decoration: none;
   font-size: 100%;
 }
 
@@ -34,6 +33,7 @@ body {
 }
 .name {
   color: white;
+  text-decoration: none;
   font-size: 100%;
 }
 
@@ -50,5 +50,26 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.Nomdetails {
+  color: aliceblue;
+  z-index: 2;
+}
+
+.Flagdetails {
+  width: 50%;
+  height: 350%;
+  position: absolute;
+  z-index: 1;
+}
+.namef {
+  position: relative;
+  display: flex;
   justify-content: center;
 }

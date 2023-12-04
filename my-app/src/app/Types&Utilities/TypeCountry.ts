@@ -1,78 +1,14 @@
-interface Name {
-  common: string
-  official: string
-  nativeName: {
-    fra: {
-      official: string
-      common: string
+export type Country = {
+  name: {
+    common: string
+    official: string
+    nativeName: {
+      [key: string]: {
+        official: string
+        common: string
+      }
     }
   }
-}
-
-interface NativeNames {
-  fra: {
-    official: string
-    common: string
-  }
-}
-
-interface Currencies {
-  XOF: {
-    name: string
-    symbol: string
-  }
-}
-
-interface Idd {
-  root: string
-  suffixes: string[]
-}
-
-interface Demonyms {
-  eng: {
-    f: string
-    m: string
-  }
-  fra: {
-    f: string
-    m: string
-  }
-}
-
-interface Translations {
-  ara: {
-    official: string
-    common: string
-  }
-  bre: {
-    official: string
-    common: string
-  }
-  // ... (other language translations)
-}
-
-interface Maps {
-  googleMaps: string
-  openStreetMaps: string
-}
-
-interface Flags {
-  png: string
-  svg: string
-  alt: string
-}
-
-interface CoatOfArms {
-  png: string
-  svg: string
-}
-
-interface CapitalInfo {
-  latlng: number[]
-}
-
-interface CountryType {
-  name: Name
   tld: string[]
   cca2: string
   ccn3: string
@@ -81,23 +17,48 @@ interface CountryType {
   independent: boolean
   status: string
   unMember: boolean
-  currencies: Currencies
-  idd: Idd
+  currencies: {
+    [key: string]: {
+      name: string
+      symbol: string
+    }
+  }
+  idd: {
+    root: string
+    suffixes: string[]
+  }
   capital: string[]
   altSpellings: string[]
   region: string
   subregion: string
-  languages: { [key: string]: string }
-  translations: Translations
+  languages: {
+    [key: string]: string
+  }
+  translations: {
+    [key: string]: {
+      official: string
+      common: string
+    }
+  }
   latlng: number[]
   landlocked: boolean
   borders: string[]
   area: number
-  demonyms: Demonyms
+  demonyms: {
+    [key: string]: {
+      f: string
+      m: string
+    }
+  }
   flag: string
-  maps: Maps
+  maps: {
+    googleMaps: string
+    openStreetMaps: string
+  }
   population: number
-  gini: { [key: string]: number }
+  gini: {
+    [key: number]: number
+  }
   fifa: string
   car: {
     signs: string[]
@@ -105,10 +66,17 @@ interface CountryType {
   }
   timezones: string[]
   continents: string[]
-  flags: Flags
-  coatOfArms: CoatOfArms
+  flags: {
+    png: string
+    svg: string
+    alt: string
+  }
+  coatOfArms: {
+    png: string
+    svg: string
+  }
   startOfWeek: string
-  capitalInfo: CapitalInfo
+  capitalInfo: {
+    latlng: number[]
+  }
 }
-
-export default CountryType

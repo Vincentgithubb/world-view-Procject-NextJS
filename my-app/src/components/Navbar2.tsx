@@ -2,19 +2,14 @@ import { useEffect } from 'react'
 import Input from 'postcss/lib/input'
 import Link from 'next/link'
 
-type navProps = {
-  handleSearch: any
-}
-
-const Navbar = ({ handleSearch }: navProps) => {
+const Navbar2 = () => {
   return (
     <div className="topnav">
       <a className="active" href="/">
         World View
       </a>
-      <input className="search" type="text" placeholder="Search" onChange={handleSearch} />
     </div>
   )
 }
 
-export default Navbar
+export default Navbar2

@@ -5,11 +5,11 @@ import Image from 'next/image'
 import Navbar from '@/components/Navbar'
 import { FetchCountryData } from '@/services/ServiceCountry'
 import { FetchDetailsCountryData } from '@/services/ServiceDetails'
-import CountryType from './Types&Utilities/TypeCountry'
+import { Country } from './Types&Utilities/TypeCountry'
 import Link from 'next/link'
 
 export default function Home() {
-  const [data, setdata] = useState<CountryType[]>()
+  const [data, setdata] = useState<Country[]>()
   const [searchcountry, setSearchCountry] = useState('')
 
   useEffect(() => {
