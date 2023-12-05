@@ -27,14 +27,18 @@ export default function Home() {
           <h1>{data[0]?.name.common}</h1>
         </div>
       </div>
-      <div className="basicnames">
+      <div>
         {languages.map((language, i) => (
-          <p key={i}>
-            {data[0]?.name.common}
-            {data[0]?.name.nativeName[language].official}
-          </p>
+          <div key={i} className="basicnames">
+            <h1>Noms</h1>
+            <div>{data[0]?.name.common}</div>
+            <div>{data[0]?.name.official}</div>
+            <div>{data[0]?.name.nativeName[language].common}</div>
+            <div>{data[0]?.name.nativeName[language].official}</div>
+          </div>
         ))}
       </div>
+      <div></div>
     </main>
   )
 }

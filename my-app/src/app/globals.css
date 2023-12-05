@@ -59,17 +59,21 @@ a {
 
 .Nomdetails {
   color: aliceblue;
-  z-index: 2;
 }
 
-.Flagdetails {
-  width: 50%;
-  height: 350%;
-  position: absolute;
-  z-index: 1;
+.Flagdetails img {
+  height: 200px;
+  width: auto;
 }
 .namef {
-  position: relative;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.basicnames {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
 }
