@@ -12,7 +12,7 @@ const CountryCard = ({ country }: countrycardProps) => {
       href={{
         pathname: '/pagedetails',
         query: {
-          name: `${country.name.common}`
+          ccn3: `${country.ccn3}`
         }
       }}
     >

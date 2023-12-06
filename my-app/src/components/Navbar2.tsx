@@ -1,7 +1,3 @@
-import { useEffect } from 'react'
-import Input from 'postcss/lib/input'
-import Link from 'next/link'
-
 const Navbar2 = () => {
   return (
     <div className="topnav">

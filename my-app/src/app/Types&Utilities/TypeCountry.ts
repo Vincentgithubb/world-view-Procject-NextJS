@@ -11,7 +11,7 @@ export type Country = {
   }
   tld: string[]
   cca2: string
-  ccn3: string
+  ccn3: number
   cca3: string
   cioc: string
   independent: boolean
