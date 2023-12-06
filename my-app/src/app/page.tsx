@@ -8,6 +8,7 @@ import { Country } from './Types&Utilities/TypeCountry'
 export default function Home() {
   const [data, setdata] = useState<Country[]>()
   const [searchcountry, setSearchCountry] = useState('')
+  const [selectedContinent, setSelectedContinent] = useState('')
 
   useEffect(() => {
     FetchCountryData().then((data) => {
@@ -27,12 +28,21 @@ export default function Home() {
     setSearchCountry(event.target.value)
   }
 
+  const handleContinentChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    setSelectedContinent(event.target.value)
+  }
+
   const filteredData =
-    data && data.filter((country: any) => country.name.common.toLowerCase().includes(searchcountry.toLowerCase()))
+    data &&
+    data.filter(
+      (country: any) =>
+        country.name.common.toLowerCase().includes(searchcountry.toLowerCase()) &&
+        (selectedContinent === '' || country.continents.includes(selectedContinent))
+    )
 
   return (
     <main>
-      <Navbar handleSearch={handleSearch} />
+      <Navbar handleSearch={handleSearch} handleContinentChange={handleContinentChange} />{' '}
       <div className="boitepays">
         {filteredData &&
           filteredData.map((country: any) => <CountryCard key={country.name.common} country={country} />)}
