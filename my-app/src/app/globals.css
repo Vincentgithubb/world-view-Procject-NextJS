@@ -6,10 +6,10 @@
 
 .topnav {
   overflow: hidden;
-  background-color: black;
+  background: linear-gradient(to bottom, rgb(183, 83, 99), #1b1a1a); /* Gradient background */
   justify-content: space-between;
   display: flex;
-  height: 6%;
+  height: 8%;
 }
 
 .topnav a {
