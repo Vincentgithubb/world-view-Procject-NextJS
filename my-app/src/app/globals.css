@@ -1,3 +1,9 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
 .topnav {
   overflow: hidden;
   background-color: black;
@@ -5,6 +11,7 @@
   display: flex;
   height: 6%;
 }
+
 .topnav a {
   float: left;
   color: orchid;
@@ -31,6 +38,7 @@ body {
   width: 200px;
   height: auto;
 }
+
 .name {
   color: white;
   text-decoration: none;
@@ -66,45 +74,37 @@ a {
   height: 200px;
   width: auto;
 }
+
 .namef {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.basicnames {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: white;
-}
-
-.tld {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: white;
-}
-
-.geographicall {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: white;
-}
-.poli {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: white;
-}
+.basicnames,
+.tld,
+.geographicall,
+.poli,
 .eco {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #444;
+  border-radius: 8px;
   color: white;
+
+  /* Display in columns */
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
 }
+
 .currencies {
   display: flex;
-  -ms-flex-align: center;
+  align-items: center;
+}
+
+Link a:hover {
+  background-color: aqua;
 }

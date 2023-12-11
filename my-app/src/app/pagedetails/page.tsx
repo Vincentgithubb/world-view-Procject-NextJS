@@ -36,13 +36,13 @@ export default function Home() {
           <div>Nom commun: {data[0]?.name.common}</div>
           <div>Nom official: {data[0]?.name.official}</div>
           <h3>Noms Natifs:</h3>
+          {languages.map((language, i) => (
+            <div key={i}>
+              <div>{data[0]?.name.nativeName[language].common}</div>
+              <div>{data[0]?.name.nativeName[language].official}</div>
+            </div>
+          ))}
         </div>
-        {languages.map((language, i) => (
-          <div key={i} className="basicnames">
-            <div>{data[0]?.name.nativeName[language].common}</div>
-            <div>{data[0]?.name.nativeName[language].official}</div>
-          </div>
-        ))}
       </div>
       <div className="tld">
         <h3>tld:</h3>
@@ -110,18 +110,18 @@ export default function Home() {
                     ({key}) : {data[0]?.languages[key]}
                   </p>
                 ) : (
-                  <p>({key}) : aucun</p>
+                  <p>({key}) : aucune</p>
                 )}
               </div>
             ))
           ) : (
-            <p>language : aucun</p>
+            <p>language : aucune</p>
           )}
         </p>
         <h3>les gentilés du pays</h3>
         <p>
           {jsp.map((jsp, i) => (
-            <div key={i} className="basicnames">
+            <div key={i}>
               <div>{data[0]?.demonyms[jsp].m}</div>
               <div>{data[0]?.demonyms[jsp].f}</div>
             </div>
