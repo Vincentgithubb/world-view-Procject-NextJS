@@ -5,11 +5,10 @@
   animation: scrollBackground 10s linear infinite;
   display: flex;
   justify-content: space-between;
-  align-items: center; /* Centre les éléments verticalement */
+  align-items: center;
   height: 8%;
 }
 
-/* Ajoutez une nouvelle animation pour le fond défilant */
 @keyframes scrollBackground {
   0% {
     background-position: 100% 0;
@@ -20,16 +19,20 @@
 }
 
 .active {
-  float: left; /* Place World View à gauche */
+  float: left;
 }
 
 .search {
   width: 25%;
-  margin: 0 auto; /* Centre la barre de recherche horizontalement */
+  margin: 0 auto;
 }
 
 .filters {
-  float: right; /* Place le choix de filtre à droite */
+  float: right;
+}
+
+.card p {
+  border: solid;
 }
 
 .topnav a {
