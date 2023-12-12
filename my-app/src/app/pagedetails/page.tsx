@@ -110,12 +110,12 @@ export default function Home() {
                     ({key}) : {data[0]?.languages[key]}
                   </p>
                 ) : (
-                  <p>({key}) : aucune</p>
+                  <p>({key}) : aucun</p>
                 )}
               </div>
             ))
           ) : (
-            <p>language : aucune</p>
+            <p>language : aucun</p>
           )}
         </p>
         <h3>les gentilés du pays</h3>
