@@ -24,6 +24,7 @@ const Navbar = ({ handleSearch, handleContinentChange }: NavProps) => {
           <option value="North America">Amérique du nord</option>
           <option value="South America">Amérique du sud</option>
           <option value="Europe">Europe</option>
+          <option value="Oceania">Océanie</option>
         </select>
       </div>
     </>
